@@ -23,9 +23,11 @@ public class MemberService {
 
     public Member saveMember(MemberDTO memberDTO) {
         Member member = Member.builder()
-                .nickname(memberDTO.getNickname())
+                .name(memberDTO.getName())
                 .socialId(memberDTO.getSocialId())
                 .profileImage(memberDTO.getProfileImage())  // 필드 이름을 일관되게 변경
+                .nickname(memberDTO.getNickname())
+                .cardInfo(memberDTO.getCardInfo())
                 .role(MemberRole.USER)
                 .build();
         return memberRepository.save(member);

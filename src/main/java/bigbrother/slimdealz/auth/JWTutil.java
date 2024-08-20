@@ -67,7 +67,7 @@ public class JWTutil {
         String role = (String) claims.get("role");
         MemberRole memberRole = MemberRole.valueOf(role);
 
-        Member member = Member.builder().socialId(socialId).nickname(name).role(memberRole).build();
+        Member member = Member.builder().socialId(socialId).name(name).role(memberRole).build();
         Set<SimpleGrantedAuthority> authorities = Collections.singleton(new SimpleGrantedAuthority(member.getRole().getValue()));
         PrincipalDetail principalDetail = new PrincipalDetail(member, authorities);
 

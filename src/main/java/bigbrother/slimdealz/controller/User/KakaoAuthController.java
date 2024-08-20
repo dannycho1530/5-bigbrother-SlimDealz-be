@@ -65,7 +65,7 @@ public class KakaoAuthController {
         } else {
             // 기존 회원이 없는 경우, 새로 등록
             MemberDTO memberDTO = new MemberDTO();
-            memberDTO.setNickname(kakaoUserInfo.getNickname());
+            memberDTO.setName(kakaoUserInfo.getName());
             memberDTO.setSocialId(kakaoUserInfo.getSocialId());
             memberDTO.setProfileImage(kakaoUserInfo.getProfileImage());
 
@@ -75,7 +75,7 @@ public class KakaoAuthController {
         // 5. JWT 토큰 생성 (JwtUtils 사용)
         Map<String, Object> claims = Map.of(
                 "socialId", member.getSocialId(),
-                "name", member.getNickname(),
+                "name", member.getName(),
                 "role", member.getRole().getValue(), // 사용자 역할 설정
                 "profile_image", member.getProfileImage()
         );

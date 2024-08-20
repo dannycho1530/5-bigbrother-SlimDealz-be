@@ -32,7 +32,7 @@ public class PrincipalDetail implements UserDetails, OAuth2User {
     // 토큰에 포함될 사용자 정보
     public Map<String, Object> getMemberInfo() {
         Map<String, Object> info = new HashMap<>();
-        info.put("name", member.getNickname());
+        info.put("name", member.getName());
         info.put("socialId", member.getSocialId());
         info.put("role", member.getRole().getValue());
         return info;
@@ -40,7 +40,7 @@ public class PrincipalDetail implements UserDetails, OAuth2User {
 
     @Override
     public String getName() {
-        return member.getNickname();
+        return member.getName();
     }
 
     @Override
@@ -61,7 +61,7 @@ public class PrincipalDetail implements UserDetails, OAuth2User {
 
     @Override
     public String getUsername() {
-        return member.getNickname();  // 또는 socialId 등 다른 유일한 식별자를 반환
+        return member.getName();  // 또는 socialId 등 다른 유일한 식별자를 반환
     }
 
     @Override

@@ -17,7 +17,8 @@ public class KakaoUserInfo {
         return socialId;
     }
 
-    public String getNickname() {
+    public String getName() {
+
         return String.valueOf(profile.get("nickname"));
     }
 
