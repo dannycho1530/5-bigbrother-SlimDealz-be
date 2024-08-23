@@ -7,15 +7,10 @@ spring:
     url: jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
-#  datasource:
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#    url: jdbc:mysql://localhost:3306/test_db?useSSL=false&serverTimezone=Asia/Seoul
-#    username: root
-#    password: 12345
 
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     show-sql: true
     properties:
       hibernate.format_sql: true
@@ -42,12 +37,47 @@ spring:
             user-info-uri: https://kapi.kakao.com/v2/user/me
             user-name-attribute: id # 유저 정보 조회 시 반환되는 최상위 필드명으로 해야 한다.
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #  data:
 #    redis:
 #      host: ${REDIS_HOST}
 #      port: ${REDIS_PORT}
 #      password: ${REDIS_PASSWORD}
 #      timeout: 2000
-#
 #    cache:
 #      type: redis
+#
+=======
+=======
+
+
+
+>>>>>>> Stashed changes
+  data:
+    redis:
+      host: ${REDIS_HOST}
+      port: ${REDIS_PORT}
+      password: ${REDIS_PASSWORD}
+      timeout: 2000
+    cache:
+      type: redis
+<<<<<<< Updated upstream
+
+>>>>>>> Stashed changes
+#  elasticsearch:
+#    repositories:
+#      enalbled: true
+#    url: localhost:9200
+=======
+#
+#  elasticsearch:
+#    repositories:
+#      enalbled: true
+#    url: localhost:9200
+
+#  elasticsearch:
+#    repositories:
+#      enalbled: true
+#    url: localhost:9200
+>>>>>>> Stashed changes
