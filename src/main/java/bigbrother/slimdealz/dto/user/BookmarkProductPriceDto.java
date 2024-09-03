@@ -1,5 +1,4 @@
 package bigbrother.slimdealz.dto.user;
-
 import bigbrother.slimdealz.dto.product.PriceDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
